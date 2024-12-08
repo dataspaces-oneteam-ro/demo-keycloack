@@ -1,0 +1,14 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+name: demojhipsterkeycloack
+services:
+  mysql:
+    extends:
+      file: ./mysql.yml
+      service: mysql
+    profiles:
+      - ''
+      - prod
+  keycloak:
+    extends:
+      file: ./keycloak.yml
+      service: keycloak
